@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DomainModel.Runtime/DomainModel.Runtime.csproj" />
+    <Project Path="src/DomainSchema.Generator/DomainSchema.Generator.csproj" />
+    <Project Path="src/Sample.Domain/Sample.Domain.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Sample.Domain.Tests/Sample.Domain.Tests.csproj" />
+  </Folder>
+</Solution>

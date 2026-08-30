@@ -1,0 +1,36 @@
+# Minimal YAML schema shape:
+#
+# type: <string>              — the generated C# type name
+# fields:
+#   - name: <string>
+#     type: <string>          — primitive: string | int | decimal | bool | guid
+#     constraint:             — optional; only one of the following keys
+#       non_empty: true       — string must not be empty
+#       range: { min, max }   — numeric inclusive range
+#     exclude_from_projection: true   — omit this field from lightweight projections
+# relationships:
+#   - name: <string>
+#     target: <string>        — name of the related domain type
+#     cardinality: one | many
+
+type: Customer
+fields:
+  - name: Id
+    type: guid
+  - name: FullName
+    type: string
+    constraint:
+      non_empty: true
+  - name: Email
+    type: string
+  - name: Age
+    type: int
+    constraint:
+      range: { min: 0, max: 150 }
+  - name: Notes
+    type: string
+    exclude_from_projection: true
+relationships:
+  - name: Address
+    target: Address
+    cardinality: one

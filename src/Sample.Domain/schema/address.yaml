@@ -1,0 +1,8 @@
+type: Address
+fields:
+  - name: Street
+    type: string
+  - name: City
+    type: string
+  - name: PostalCode
+    type: string
